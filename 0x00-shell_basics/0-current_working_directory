@@ -1,3 +1,4 @@
 #!/bin/bash
-realpath
+realpath holberton-system_engineering-devops
+
 
