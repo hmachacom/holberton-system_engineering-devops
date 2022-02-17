@@ -4,10 +4,12 @@
 
 while ((i <= 10));
 do
-	if ((i != 8 && i != 4));then
-		echo "Best School"
-	elif ((i == 4));then
-		echo "bad luck"
+	if ((i != 8));then
+		if ((i != 4));then
+			echo "Best School"
+		else
+			echo "bad luck"
+		fi
 	elif ((i == 8));then
 		echo "good luck"
 	fi
