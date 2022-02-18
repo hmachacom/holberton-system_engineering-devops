@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Imprime todos los archivos del repo actual en formato lista
+
+for i in *;
+do
+    echo "$i" | cut -d '-' -f2
+done
