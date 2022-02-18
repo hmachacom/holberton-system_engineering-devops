@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Despliega todos lo procesos y subprocesos de un programa easy
+
+pgrep -l bash
