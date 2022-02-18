@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Despliega todos lo procesos y subprocesos de un programa
+# shellcheck disable=SC2009
+
+while((1));
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
