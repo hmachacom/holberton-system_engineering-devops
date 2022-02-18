@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# detener un proceso
+
+kill "$(pgrep -f "7-highlander")"
