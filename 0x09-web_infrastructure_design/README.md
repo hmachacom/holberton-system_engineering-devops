@@ -40,11 +40,11 @@ The objective of this project is to learn about the Class that can be used in PY
 
 ### Files
 <div align="center">
-	|File                 |           Description    |
-	|---------------------|--------------------------|
-	| Simple web stack |server web infrastructure 1|
-	| Distributed web infrastructure | server web infrastructure 2|
-	| Secured and monitored web infrastructure |server web infrastructure 3      |
+|File                 |           Description    |
+|---------------------|--------------------------|
+| Simple web stack |server web infrastructure 1|
+| Distributed web infrastructure | server web infrastructure 2|
+| Secured and monitored web infrastructure |server web infrastructure 3      |
 
 </div>
 ## :information_desk_person: Author
