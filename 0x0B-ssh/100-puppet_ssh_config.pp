@@ -1,3 +1,4 @@
+#Client configuration file (w/ Puppet)
 file_line { 'ssh_config':
     ensure   => present,
     path     => '/etc/ssh/ssh_config',
