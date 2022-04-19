@@ -1,3 +1,4 @@
+#Create a file
 file { '/tmp/school':
   ensure  => present,
   group   => 'www-data',
