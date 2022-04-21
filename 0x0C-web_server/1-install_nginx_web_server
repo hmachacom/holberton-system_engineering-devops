@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #install nginx in server
-apt-get update
-apt-get -y install nginx
+sudo apt-get update
+sudo apt-get -y install nginx
 
-mkdir -p /var/www/html
-touch /var/www/html/index.html
+sudo mkdir -p /var/www/html
+sudo touch /var/www/html/index.html
 
-printf %s "Hello World!\n" > /var/www/html/*
+sudo printf %s "Hello World!\n" > /var/www/html/*
 
-nginx -s reload
+sudo nginx -s reload
