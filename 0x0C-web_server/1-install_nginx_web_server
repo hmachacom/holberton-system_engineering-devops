@@ -3,10 +3,10 @@
 apt-get update
 apt-get -y install nginx
 
-mkdir -p /var/www/html
-chown -R "$USER":"$USER" /var/www/
-touch /var/www/html/index.html
 
-printf %s "Hello World!\n" > /var/www/html/*
+chown -R "$USER":"$USER" /var/www/
+
+
+printf %s "Hello World!\n" > /var/www/html/index.nginx-debian.html
 
 nginx -s reload
