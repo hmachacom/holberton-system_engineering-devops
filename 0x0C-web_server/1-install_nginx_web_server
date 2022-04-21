@@ -6,6 +6,6 @@ apt-get -y install nginx
 mkdir -p /var/www/html
 touch /var/www/html/index.html
 
-printf %s "Hello World!" > /var/www/html/*
+printf %s "Hello World!\n" > /var/www/html/*
 
 nginx -s reload
