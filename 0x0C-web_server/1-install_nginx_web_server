@@ -1,4 +1,10 @@
-#!/bin/bash
-sudo apt-get update
-sudo apt-get install nginx
+#!usr/bin/env bash
+#apt-get update
+apt-get -y install nginx
 
+mkdir /var/www/html
+touch /var/www/html/index.html
+
+printf %s "Hello World!" > /var/www/html/index.html
+
+nginx -s reload
