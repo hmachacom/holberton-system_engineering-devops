@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # transfer file on server 
 if  (($# == 4)) 
 then
