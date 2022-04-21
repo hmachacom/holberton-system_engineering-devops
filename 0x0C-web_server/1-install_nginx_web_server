@@ -3,9 +3,9 @@
 apt-get update
 apt-get -y install nginx
 
-mkdir /var/www/html
+mkdir -p /var/www/html
 touch /var/www/html/index.html
 
-printf %s "Hello World!" > /var/www/html/index.html
+printf %s "Hello World!" > /var/www/html/*
 
 nginx -s reload
