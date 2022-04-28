@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#change shell
+sudo -u "$1" whoami
+
