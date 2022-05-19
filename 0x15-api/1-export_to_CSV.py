@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """ Gather data from an API and Export to CSV"""
-import requests
-import sys
-import csv
 
 if __name__ == "__main__":
+    import requests
+    import sys
+    import csv
 
     argv = sys.argv[1]
     name = (
