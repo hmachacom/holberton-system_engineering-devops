@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ Gather data from an API """
+from sys import argv
 import json
 import urllib.request
-from sys import argv
 
 if __name__ == "__main__":
     with urllib.request.urlopen(
