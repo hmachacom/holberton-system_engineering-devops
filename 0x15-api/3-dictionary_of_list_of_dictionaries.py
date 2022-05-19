@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Gather data from an API and Export to CSV"""
+""" Using what you did in the task #0, extend your
+Python script to export data in the JSON format."""
 import requests
 import sys
 import json
