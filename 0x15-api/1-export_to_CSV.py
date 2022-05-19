@@ -11,7 +11,7 @@ if __name__ == "__main__":
         requests.get("https://jsonplaceholder.typicode.com/users/{}"
                      .format(argv))
         .json()
-        .get("name")
+        .get("username")
     )
 
     taskEmploy = requests.get(
