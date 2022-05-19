@@ -1,18 +1,16 @@
 #!/usr/bin/python3
 """ Gather data from an API """
-import urllib.request
 import json
+import urllib.request
 from sys import argv
 
 if __name__ == "__main__":
     with urllib.request.urlopen(
-        "https://jsonplaceholder.typicode.com/users"
+        f"https://jsonplaceholder.typicode.com/users/{argv[1]}"
     ) as nameEmploy:
-
-        for i in json.load(nameEmploy):
-            if i.get("id") == int(argv[1]):
-                name = i.get("name")
-                id = i.get("id")
+        date = json.load(nameEmploy)
+        name = date.get("name")
+        id = date.get("id")
         with urllib.request.urlopen(
             f"https://jsonplaceholder.typicode.com/users/{id}/todos"
         ) as taskEmploy:
@@ -25,5 +23,5 @@ if __name__ == "__main__":
                     nameTaskDone.append(task.get("title"))
                 tasksTotal += 1
         print(f"Employee {name} is done with tasks({tasksDone}/{tasksTotal}):")
-        print("\t ", end='')
-        print('\n\t '.join(nameTaskDone))
+        print("\t ", end="")
+        print("\n\t ".join(nameTaskDone))
