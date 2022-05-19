@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ Gather data from an API and Export to CSV"""
 import requests
-import csv
 import sys
+import csv
 
 if __name__ == "__main__":
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     taskEmploy = requests.get(
         "https://jsonplaceholder.typicode.com/todos"
     ).json()
-    with open('{}.csv'.format(argv), 'w', newline='') as csvfile:
+    with open('{}.csv'.format(argv), 'w') as csvfile:
         writer = csv.writer(csvfile,  delimiter=',',
                             quoting=csv.QUOTE_ALL)
         for task in taskEmploy:
