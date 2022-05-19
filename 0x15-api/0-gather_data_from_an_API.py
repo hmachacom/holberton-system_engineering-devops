@@ -1,21 +1,25 @@
 #!/usr/bin/python3
 """ Gather data from an API """
-from sys import argv
 import requests
+import sys
 
 if __name__ == "__main__":
-    name = requests.get(
-        f"https://jsonplaceholder.typicode.com/users/{argv[1]}"
-    ).json().get('name')
+
+    argv = sys.argv[1]
+    name = (
+        requests.get(f"https://jsonplaceholder.typicode.com/users/{argv}")
+        .json()
+        .get("name")
+    )
 
     taskEmploy = requests.get(
-            f"https://jsonplaceholder.typicode.com/users/{argv[1]}/todos"
-        ).json()
+        "https://jsonplaceholder.typicode.com/todos"
+    ).json()
     tasksDone = 0
     tasksTotal = 0
     nameTaskDone = []
     for task in taskEmploy:
-        if task.get("completed"):
+        if task.get("completed") and task.get('userId') == int(argv):
             tasksDone += 1
             nameTaskDone.append(task.get("title"))
         tasksTotal += 1
