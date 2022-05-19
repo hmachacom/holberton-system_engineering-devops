@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     argv = sys.argv[1]
     name = (
-        requests.get(f"https://jsonplaceholder.typicode.com/users/{argv}")
+        requests.get("https://jsonplaceholder.typicode.com/users/{}".format(argv))
         .json()
         .get("name")
     )
@@ -23,6 +23,6 @@ if __name__ == "__main__":
             tasksDone += 1
             nameTaskDone.append(task.get("title"))
         tasksTotal += 1
-    print(f"Employee {name} is done with tasks({tasksDone}/{tasksTotal}):")
+    print("Employee {} is done with tasks({}/{}):".format(name, tasksDone,tasksTotal))
     print("\t ", end="")
     print("\n\t ".join(nameTaskDone))
