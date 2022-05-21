@@ -5,20 +5,18 @@ subreddit."""
 import requests
 
 
-
 def top_ten(subreddit):
-	"""subreddit
-
-	Args:
-		subreddit (str): subreddit
-	"""
+    """subreddit
+    Args:
+        subreddit (str): subreddit
+    """
     url = requests.get(
         "https://www.reddit.com/r/{}/top.json?limit=10".format(subreddit),
         headers={"User-Agent": "platform"},
         allow_redirects=False,
     )
     if url.status_code == 200:
-        for title in url.json().get("data").get('children'):
-            print(title.get('data').get('title'))
-	else:
+        for title in url.json().get("data").get("children"):
+            print(title.get("data").get("title"))
+    else:
         print(None)

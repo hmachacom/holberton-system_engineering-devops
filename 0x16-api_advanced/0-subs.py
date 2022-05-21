@@ -7,13 +7,10 @@ given, the function should return 0."""
 import requests
 
 
-
 def number_of_subscribers(subreddit):
-    """subreddit
-
+    """ subreddit
     Args:
         subreddit (str): subreddit
-
     Returns:
         int: _description_
     """
