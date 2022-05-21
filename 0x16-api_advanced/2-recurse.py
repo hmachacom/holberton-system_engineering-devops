@@ -21,7 +21,7 @@ def recurse(subreddit, hot_list=[]):
         _type_: _description_
     """
     global all_hot
-    headers={"User-Agent": "platform"}
+    headers = {"User-Agent": "platform"}
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     parameters = {"after": all_hot}
     response = requests.get(
