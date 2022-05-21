@@ -2,7 +2,6 @@
 """Progress vs Score  Task Body Write a function that queries the
 and prints the titles of the first 10 hot posts listed for a given
 subreddit."""
-import requests
 
 
 def top_ten(subreddit):
@@ -10,6 +9,8 @@ def top_ten(subreddit):
     Args:
         subreddit (str): subreddit
     """
+    import requests
+
     url = requests.get(
         "https://www.reddit.com/r/{}/top.json?limit=10".format(subreddit),
         headers={"User-Agent": "platform"},
@@ -19,4 +20,4 @@ def top_ten(subreddit):
         for title in url.json().get("data").get("children"):
             print(title.get("data").get("title"))
     else:
-        print(None)
+        print("None")
