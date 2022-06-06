@@ -1,4 +1,6 @@
 # 0x18. Webstack monitoring
+
+
 * [Monitoring](https://intranet.hbtn.io/concepts/13) 
 
 * [Server](https://intranet.hbtn.io/concepts/67) 
